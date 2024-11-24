@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Bookmark</title>
+</head>
+
+<body>
+    <header class="pt-5">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <h1 class="text  pt-2 position-relative">Bookmarker</h1>
+            <div
+                class="book-fav w-100 p-3 py-4 mt-5 align-items-center d-flex flex-column justify-content-center  gap-4">
+                <h2>
+                    <i class="fa-solid fa-bookmark"></i>
+                    Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+
+                <div class="site-name w-100 d-flex flex-column justify-content-center">
+                    <label for="name" class="pb-2 fw-bold">
+                        <i class="fa-solid fa-book-bookmark pe-2 text-black"></i>Site Name</label>
+                    <input type="text" placeholder="Bookmark Name" class="form-control" id="name" />
+
+                    <label for="url" class="pb-2 fw-bold">
+                        <i class="fa-solid fa-link pe-2 pt-4 text-black"></i>Site URL</label>
+                    <input type="text" placeholder="Website URL" class="form-control" id="url" />
+                </div>
+                <button onclick="addSubmit()" class="btn btn-danger button px-5 sumbit">Submit</button>
+
+            </div>
+
+
+            <div class="book-fav w-100 ">
+
+                <table class="table mt-4 text-center bg-light">
+                    <thead>
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Delete</th>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+
+            <div id="errorBox"
+                class="box-error position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none">
+                <div class="box-conent bg-white p-4 rounded-2 shadow-lg">
+                    <div class="box-header w-100 d-flex justify-content-between align-items-center mb-4">
+                        <div class="point d-flex">
+                            <div class="point1 rounded-circle me-2"></div>
+                            <div class="point2 rounded-circle me-2"></div>
+                            <div class="point3 rounded-circle me-2"></div>
+                        </div>
+                        <button class="btn " id="closeErrorBox">
+                            <i class="fa-solid fa-xmark close fs-3"></i>
+                        </button>
+                    </div>
+                    <p >
+                        Site Name or Url is not valid, Please follow the rules below :
+                    </p>
+                    <div class="text-error list-unstyled m-0">
+                    
+                            <i class="fa-regular fa-circle-right p-2"></i>Site name must
+                            contain at least 3 characters
+                        
+                            <div class="text-error list-unstyled m-0">
+
+                            <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a
+                            valid one
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+        <script src="./js/main.js"></script>
+        <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

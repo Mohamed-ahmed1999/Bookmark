@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&family=Saira+Condensed:wght@300;400;500;600;700;800&display=swap");
+
+body {
+  font-family: "PT Sans Caption", sans-serif;
+  height: 100vh;
+  background-color: #f7ecde;
+}
+
+
+h1 {
+    font-size: 50px;
+    font-family: "Pacifico", cursive;
+    color: #352e28;
+    isolation: isolate;
+  }
+
+   h1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 28%;
+    bottom: 2px;
+    background-color: #fec260;
+    transition: all 0.30s ;
+    z-index: -99;
+  }
+  
+   h1:hover::before {
+    height: 55%;
+  }
+
+  .book-fav {
+    width: 80%; 
+    border-top: 2px dotted #352e28; 
+    border-color: #352e28;
+  }
+
+  .book-fav h2 { 
+    font-family: "Righteous", cursive;
+    font-size: 25px;
+    background: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+    
+.form-control:focus { 
+  border-color: #d99c39;
+  box-shadow: 0 0 0 5px #fac06255;
+
+}
+
+.box-error {
+  background-color: #0007;
+}
+
+.box-conent {
+  width: 500px;
+  z-index: 999;
+}
+
+.box-conent p {
+  font-family: "Bree Serif", serif;
+  font-size: 21px;
+  color: #352e28;
+}
+
+.text-error {
+  font-size: 17px;
+  padding-top: 12px;
+}
+.text-error i {
+  color: #bb4120;
+}
+
+.point div {
+  width: 20px;
+  height: 20px;
+}
+
+ .point1 {
+  background-color: #f15f5d;
+}
+ .point2 {
+  background-color: rgb(229, 229, 62);
+}
+ .point3 {
+  background-color: #48ba42;
+}
