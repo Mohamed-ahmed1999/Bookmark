@@ -84,7 +84,7 @@ function hideBox() {
 closeErrorBox.addEventListener("click", hideBox);
 
 var nameRegex = /^[a-zA-Z0-9\s]{3,}$/;
-var urlRegex = /^(https?:\/\/)?(www\.)?[\w-]+\.\w{2,}(\/.*)?$/; 
+var urlRegex = /^(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)$/;
 
 siteName.addEventListener("input", function () {
   validateField(siteName, nameRegex);
